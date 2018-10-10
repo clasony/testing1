@@ -1,0 +1,41 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.mysystem.save</groupId>
+  <artifactId>my-save</artifactId>
+  <packaging>jar</packaging>
+  <version>1.0</version>
+  <name>my-save</name>
+  <url>http://maven.apache.org</url>
+  
+  <properties>
+  <my-file>pom-testing</my-file>
+  <type>maven-type</type>
+  </properties>
+  
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+  
+  <build>
+  <plugins>
+  <plugin>
+  <groupId>com.googlecode.flyway</groupId>
+                <artifactId>flyway-maven-plugin</artifactId>
+                <version>1.7</version>
+  <configuration>
+  <file>${my-file}</file>
+  <uses>${maven-type}</uses>
+  </configuration>
+  
+  
+  </plugin>
+  </plugins>
+  </build>  
+  
+  </project>
